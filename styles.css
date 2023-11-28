@@ -619,6 +619,9 @@ footer p:first-line {
    p.search {
       display: none;
    }
+   header p.logoleft {
+      display: none;
+   }
 }
 
 
@@ -675,6 +678,9 @@ footer p:first-line {
       display: block;
    }
    p.search {
+      display: block;
+   }
+   header p.logoleft {
       display: block;
    }
 }
