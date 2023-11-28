@@ -1,17 +1,32 @@
 /* 
-   Lakeland Reeds Bed and Breakfast menu toggle script 
+   Robin Phelps Independent Project 
    Filename: script.js
-   HTML5 and CSS3 Illustrated Unit I, Lessons
+
+   Author:   Robin Phelps
+   Date:     11-27-23
+   HTML5 and CSS3 Illustrated
  */
 
-var navButton = document.querySelector(".navigation-menu-button img");
-if (navButton.addEventListener) {
-   navButton.addEventListener("click", function() {
-      var nav = document.querySelector(".sitenavigation ul");
-      if (nav.style.display === "block") {
-         nav.style.display = "";
-      } else {
-         nav.style.display = "block";
-      }
-   }, false);
+/* create variables */
+var nameContent = document.querySelector(".request-from");
+var feedbackContent = document.querySelector(".request-content");
+var nameInput = document.querySelector("#nameinput");
+var feedbackInput = document.querySelector("#other-info");
+var form = document.querySelector(".contact-form");
+var contactPreview = document.querySelector(".contact-preview");
+var submitButton = document.querySelector(".submitbutton");
+
+/* add form text to preview section */
+function updatePreview() {
+    nameContent.textContent = nameInput.value;
+    feedbackContent.textContent = feedbackInput.value;
+    contactPreview.className = "contact-preview show";
+    if (form.checkValidity() === true) {
+        submitButton.className = "submitbutton show";
+    }
 }
+
+/* updatePreview(); */
+
+/* create event listener for changes to the form */
+form.addEventListener("change", updatePreview, false);
