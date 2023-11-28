@@ -679,8 +679,6 @@ footer p:first-line {
    }
 }
 
-
-
 /* large screen styles */
 @media screen and (min-width: 1400px) {
    article {
